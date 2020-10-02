@@ -14,12 +14,14 @@ public class EmployeeEntity {
     private @Id @GeneratedValue Long id;
     private String name;
     private String role;
+    private Integer age;
 
     public EmployeeEntity() {}
 
-    public EmployeeEntity(String name, String role) {
+    public EmployeeEntity(String name, String role, Integer age) {
 
         this.name = name;
         this.role = role;
+        this.age = age;
     }
 }

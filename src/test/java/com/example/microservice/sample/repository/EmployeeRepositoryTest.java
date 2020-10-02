@@ -1,25 +1,25 @@
 package com.example.microservice.sample.repository;
 
+import com.example.microservice.base.repository.BaseRepositoryTest;
 import com.example.microservice.sample.entity.EmployeeEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.annotation.Resource;
-import java.util.Optional;
+import java.util.List;
 
-@SpringBootTest
-public class EmployeeRepositoryTest {
+public class EmployeeRepositoryTest extends BaseRepositoryTest<EmployeeEntity> {
 
-    @Resource
-    private EmployeeRepository repo;
+
+    @Override
+    public List<EmployeeEntity> getInitialEntities() {
+        return EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS;
+    }
 
     @Test
     public void testSave() {
-        EmployeeEntity emp = new EmployeeEntity("Ehsan", "developer");
-        repo.save(emp);
 
-        Optional<EmployeeEntity> dbEmp = repo.findById(1L);
-        Assertions.assertEquals("Ehsan", dbEmp.get().getName());
+        List<EmployeeEntity> allRecords = sut.findAll();
+        Assertions.assertEquals(EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS.size(), allRecords.size());
+        Assertions.assertEquals(EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS, allRecords);
     }
 }
