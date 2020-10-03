@@ -11,7 +11,7 @@ public class EmployeeRepositoryTest extends BaseRepositoryTest<EmployeeEntity> {
 
 
     @Override
-    public List<EmployeeEntity> getInitialEntities() {
+    public List<EmployeeEntity> loadInitialEntities() {
         return EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS;
     }
 
