@@ -16,7 +16,7 @@ public abstract class BaseRepositoryTest<T> implements BaseTest<T> {
 
     @BeforeEach
     public final void beforeEachTest() {
-        sut.saveAll(loadInitialEntities());
+        sut.saveAll(loadInitialEntitiesBeforeEachTest());
     }
 
     @AfterEach
