@@ -1,6 +1,7 @@
 package com.example.microservice.sample.entity;
 
 
+import com.example.microservice.base.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -9,14 +10,17 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class EmployeeEntity {
+public class EmployeeEntity extends BaseEntity {
 
-    private @Id @GeneratedValue Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
     private String role;
     private Integer age;
 
-    public EmployeeEntity() {}
+    public EmployeeEntity() {
+    }
 
     public EmployeeEntity(String name, String role, Integer age) {
 

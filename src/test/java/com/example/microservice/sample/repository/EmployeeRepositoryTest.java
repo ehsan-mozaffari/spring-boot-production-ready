@@ -6,13 +6,13 @@ import org.junit.jupiter.api.*;
 
 import java.util.List;
 
-public class EmployeeRepositoryTest extends BaseRepositoryTest<EmployeeEntity> {
+public class EmployeeRepositoryTest extends BaseRepositoryTest<EmployeeRepository> {
 
 
-    @Override
-    public List<EmployeeEntity> loadInitialEntitiesBeforeEachTest() {
-        return EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS;
-    }
+//    @Override
+//    public List<EmployeeEntity> loadInitialEntitiesBeforeEachTest() {
+//        return EmployeeRepositoryObjectHelper.SAMPLE_DB_RECORDS;
+//    }
 
     @Test
     @DisplayName("It finds all records of db and compare them in size of initial values.")
