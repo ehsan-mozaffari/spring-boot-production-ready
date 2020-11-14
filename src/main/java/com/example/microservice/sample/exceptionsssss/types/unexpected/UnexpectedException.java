@@ -1,13 +1,17 @@
-package app.exception.types.unexpected;
+package com.example.microservice.sample.exceptionsssss.types.unexpected;
 
-import app.exception.model.ErrorResponse;
-import app.exception.model.ErrorTypeEnum;
-import app.exception.types.GlobalException;
+import com.example.microservice.sample.exceptionsssss.model.ErrorResponse;
+import com.example.microservice.sample.exceptionsssss.model.ErrorTypeEnum;
+import com.example.microservice.sample.exceptionsssss.types.GlobalException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.Optional;
 import java.util.UUID;
 
+@ResponseStatus(value= HttpStatus.CONFLICT,
+        reason="Data integrity violation")  // 409
 public class UnexpectedException extends GlobalException {
 
     public UnexpectedException(ErrorResponse errorResponse) throws JsonProcessingException {

@@ -1,8 +1,8 @@
-package app.exception.types;
+package com.example.microservice.sample.exceptionsssss.types;
 
-import app.exception.model.Error;
-import app.exception.model.ErrorResponse;
-import app.exception.model.ErrorTypeEnum;
+import com.example.microservice.sample.exceptionsssss.model.Error;
+import com.example.microservice.sample.exceptionsssss.model.ErrorResponse;
+import com.example.microservice.sample.exceptionsssss.model.ErrorTypeEnum;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -1,4 +1,4 @@
-package app.exception.model;
+package com.example.microservice.sample.exceptionsssss.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
