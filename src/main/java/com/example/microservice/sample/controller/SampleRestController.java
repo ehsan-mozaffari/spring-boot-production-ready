@@ -26,8 +26,12 @@ public class SampleRestController {
 
     @GetMapping("/employees")
     List<EmployeeEntity> all() {
+        return repository.findAll();
+    }
+
+    @GetMapping("/exception")
+    void testException() {
         throw new TestException();
-//        return repository.findAll();
     }
 
 }
